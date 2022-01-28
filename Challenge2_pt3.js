@@ -1,10 +1,11 @@
-
 //[X] Crie 5 objetos nesse formato
 //{ nome: "" idade:"" sexo:"" profissão: "" nacionalidade:"" }
 //Ao rodar o programa, deve imprimir se a pessoa é aprovada ou não no processo ,
 //a pessoa deve ser maior de idade e brasileira para ser aprovada.
 
-const objects = {
+
+//Foi atualizado o metodo deste exercicio, automatiizando
+/*const objects = {
     person1: {
 
         Name: "Diogo",
@@ -43,9 +44,9 @@ const objects = {
         profession: "garbageman",
     },
 }
+*/
 
-
-if (objects.person1.nationality == "Brazilian" && objects.person1.Age >= 18) {
+/*if (objects.person1.nationality == "Brazilian" && objects.person1.Age >= 18) {
     console.log(" Diogo foi Aprovado")
 
 } else {
@@ -77,6 +78,67 @@ if (objects.person5.nationality == "Brazilian" && objects.person5.Age >= 18) {
 } else {
     console.log(" Victor foi Reprovado")
 }
+*/
+
+const objects = [{
+
+
+        Name: "Diogo",
+        Age: 18,
+        Sex: "Male",
+        nationality: "Canadian",
+        profession: "garbageman",
+    },
+
+    {
+        Name: "Antonio",
+        Age: 21,
+        Sex: "Male",
+        nationality: "Brazilian",
+        profession: "garbageman",
+    },
+    {
+        Name: "Ingrid",
+        Age: 22,
+        Sex: "Female",
+        nationality: "Brazilian",
+        profession: "garbageman",
+    },
+    {
+        Name: "Marcella",
+        Age: 19,
+        Sex: "Female",
+        nationality: "Canadian",
+        profession: "garbageman",
+    },
+    {
+        Name: "Victor",
+        Age: 30,
+        Sex: "Male",
+        nationality: "Canadian",
+        profession: "garbageman",
+    },
+]
+
+
+const information = () => {
+
+    for (let i = 0; i < objects.length; i++) {
+
+
+        let nationality = (objects[i].nationality)
+        let Age = (objects[i].Age)
+
+        if (nationality == "Brazilian" && Age >= "18") {
+            console.log(`${objects[i].Name} Esta aprovado, cumpriu os requisitos`)
+
+        } else(console.log(`${objects[i].Name} Esta reprovado não cumpriu os requisitos`))
+
+    }
+}
+
+information (objects)
+
 
 
 //[X] Faça um programa onde os jurados vão dar a explicação para cada nota dada. 
@@ -119,4 +181,3 @@ if (Number_note == 0) {
     console.log("Sua nota foi 10, nota maxima continue assim")
 
 }
-
